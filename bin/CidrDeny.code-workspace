@@ -1,0 +1,47 @@
+{
+  "folders": [
+    {
+      "name": "CidrDeny",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "java.project.sourcePaths": ["."],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [],
+    "java.server.launchMode": "Standard"
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Run CidrDenyTest",
+        "request": "launch",
+        "mainClass": "CidrDenyTest",
+        "classPaths": ["${workspaceFolder}/bin"],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "preLaunchTask": "Compile CidrDenyTest"
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Compile CidrDenyTest",
+        "type": "process",
+        "command": "javac",
+        "args": [
+          "-encoding", "UTF-8",
+          "-d", "${workspaceFolder}/bin",
+          "${workspaceFolder}/CidrDeny.java",
+          "${workspaceFolder}/CidrDenyTest.java"
+        ],
+        "problemMatcher": ["$javac"],
+        "group": "build"
+      }
+    ]
+  }
+}
